@@ -1,4 +1,6 @@
 # sciaga
+### Technology
+### Express, Mongoose, GraphQL, Nodemon
 ## Basic setup
 #### For basic setap run below
 ### npm init
