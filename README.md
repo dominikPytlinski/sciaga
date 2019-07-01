@@ -39,6 +39,19 @@
 #### in schema file require graphql
 #### const graphql = require('graphql');
 #### const { GrqaphQLObjectType, GraphQLString, GraphQLIn, GraphQLID, GraohQLSchema } = graphql; // deconstruct graphql, require needed
+#### Creating a type
+#### const NameType = new GraphQLObjectType({
+#### &nbsp;&nbsp;&nbsp;&nbsp;name: 'Name',
+#### &nbsp;&nbsp;&nbsp;&nbsp;fields: () => ({
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;propName: { type: one of gql types ex GraphQLString }
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;propName: { // prop wchich is user created type, has resolver for getting the data
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: ExistingType,
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;resolve(parent, age) {
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//code for get from db
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+#### &nbsp;&nbsp;&nbsp;&nbsp;}
+#### &nbsp;&nbsp;&nbsp;&nbsp;})
+#### });
 
 ## Mongoose
 #### For install type below
