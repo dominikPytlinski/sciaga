@@ -52,6 +52,19 @@
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
 #### &nbsp;&nbsp;&nbsp;&nbsp;})
 #### });
+#### Creating a query
+const RootQuery = new GraphQLObjectType({
+  name: 'RootQueryType',
+  fields: {
+    name: {
+      type: TypeWchichYouWantToUse, // usuly custom type
+      args: { type: OneOfTheGraphQlTypes }, // if they are needed
+      resolve(){
+        // code for getting form db
+      }
+    }
+  }
+})
 
 ## Mongoose
 #### For install type below
