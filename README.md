@@ -35,6 +35,10 @@
 #### &nbsp;&nbsp;&nbsp;&nbsp;schema, //graphql schema
 #### &nbsp;&nbsp;&nbsp;&nbsp;graphiql: true // optiona, true if graphiql shpuld be awaillable
 #### }))
+### Schema
+#### in schema file require graphql
+#### const graphql = require('graphql');
+#### const { GrqaphQLObjectType, GraphQLString, GraphQLIn, GraphQLID, GraohQLSchema } = graphql; // deconstruct graphql, require needed
 
 ## Mongoose
 #### For install type below
