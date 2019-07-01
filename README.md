@@ -12,5 +12,5 @@
 ### const app = express(); // new express instance
 ### const PORT = 4000 // define port
 ### app.listen(PORT, () => {
-### &nbsp;console.log('message for listening');
+###     console.log('message for listening');
 ### }) // add listening
