@@ -71,7 +71,12 @@
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-#### })
+#### });
+#### Exports
+#### module.exports = new GraphQLSchema({ // export witch graphqlschema, params query and mutatnion
+#### &nbsp;&nbsp;&nbsp;&nbsp;query: RootQuery,
+#### &nbsp;&nbsp;&nbsp;&nbsp;mutation: RootMutation
+#### });
 
 ## Mongoose
 #### For install type below
