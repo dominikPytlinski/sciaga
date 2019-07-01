@@ -36,4 +36,4 @@
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; app.listen(PORT, () => {
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log('message for listening');
 #### })
-#### ).catch(err => console.log(err)); // return promise
+#### .catch(err => console.log(err)); // return promise
