@@ -4,6 +4,17 @@
 ### npm init
 #### Above initialize npm project and create package.json
 
+## Nodemon
+#### For instal type below
+### npm install nodemon --save-dev
+#### Above installed nodemone and save as a developer dependencies
+#### Usage
+#### edit package.jason
+#### "scripts": {
+####  &nbsp;&nbsp;&nbsp;&nbsp;"test": "echo \"Error: no test specified\" && exit 1",
+####  &nbsp;&nbsp;&nbsp;&nbsp;"start": "nodemon app.js" // add this line than in terminal you can type npm start to run
+#### }
+
 ## Express
 #### For install express type below (--save flag for saving in the dependencies)
 ### npm install express --save
