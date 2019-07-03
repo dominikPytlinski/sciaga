@@ -48,7 +48,7 @@
 #### &emsp;&emsp;propName: { type: one of gql types ex GraphQLString }
 #### &emsp;&emsp;propName: { // prop wchich is user created type, has resolver for getting the data
 #### &emsp;&emsp;&emsp;type: ExistingType,
-#### &emsp;&emsp;resolve(parent, args) {
+#### &emsp;&emsp;&emsp;resolve(parent, args) {
 #### &emsp;&emsp;&emsp;&emsp;//code for get from db
 #### &emsp;&emsp;&emsp;}
 #### &emsp;&emsp}
