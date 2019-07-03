@@ -51,7 +51,7 @@
 #### &emsp;&emsp;&emsp;resolve(parent, args) {
 #### &emsp;&emsp;&emsp;&emsp;//code for get from db
 #### &emsp;&emsp;&emsp;}
-#### &emsp;&emsp}
+#### &emsp;&emsp;}
 #### &emsp;})
 #### });
 #### Creating a query
