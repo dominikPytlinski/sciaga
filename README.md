@@ -92,3 +92,11 @@
 #### &emsp;&emsp;&emsp;console.log('message for listening');
 #### })
 #### .catch(err => console.log(err)); // return promise
+#### Creating a scheam
+#### in schema file type:
+#### const mongoose = require('mongoose');
+#### cosnt Schema = mongoose.Schema;
+#### 
+#### const nameSchema = new Schema({
+#### &emsp;name: String // properity name and type
+#### });
