@@ -99,10 +99,16 @@
 #### const nameSchema = new Schema({
 #### &emsp;name: String // properity name and type
 #### });
-#### module.wxports = mongoose.model('Name', nameSchema) // Add model name and shcema wchich is used
+#### module.exports = mongoose.model('Name', nameSchema) // Add model name and shcema wchich is used
 #### for using model
 #### const ModelName = require('ModelName');
 #### for add new record
 #### let varriableName = new ModelName({
 #### &emsp;name: value // fields like in Model file in schema
 #### });
+#### for find one using id
+#### const result = ModelName.findById(id);
+#### for get all records
+#### const result = ModelName.find({}); // pass empty object
+#### fetch few record coressponding with using data (like loop schearch where...)
+#### const result = (dataForSearch) => ModelName.find({ name: { $in: dataForSearch } });
