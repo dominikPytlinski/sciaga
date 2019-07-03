@@ -112,3 +112,7 @@
 #### const result = ModelName.find({}); // pass empty object
 #### fetch few record coressponding with using data (like loop schearch where...)
 #### const result = (dataForSearch) => ModelName.find({ name: { $in: dataForSearch } });
+#### for search one record with criteria
+#### const result = (value) => ModelName.findOne({
+#### &emsp;name: value
+#### }); 
