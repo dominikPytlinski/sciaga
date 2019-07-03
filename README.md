@@ -13,7 +13,7 @@
 #### Usage
 #### edit package.jason
 #### "scripts": {
-####  \t"test": "echo \"Error: no test specified\" && exit 1",
+####  &emsp;"test": "echo \"Error: no test specified\" && exit 1",
 ####  &nbsp;&nbsp;&nbsp;&nbsp;"start": "nodemon app.js" // add this line than in terminal you can type npm start to run
 #### }
 
