@@ -96,7 +96,7 @@
 #### in schema file type:
 #### const mongoose = require('mongoose');
 #### cosnt Schema = mongoose.Schema;
- 
 #### const nameSchema = new Schema({
 #### &emsp;name: String // properity name and type
 #### });
+#### module.wxports = mongoose.model('Name', nameSchema) // Add model name and shcema wchich is used
