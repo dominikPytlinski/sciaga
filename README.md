@@ -100,3 +100,9 @@
 #### &emsp;name: String // properity name and type
 #### });
 #### module.wxports = mongoose.model('Name', nameSchema) // Add model name and shcema wchich is used
+#### for using model
+#### const ModelName = require('ModelName');
+#### for add new record
+#### let varriableName = new ModelName({
+#### &emsp;name: value // fields like in Model file in schema
+#### });
