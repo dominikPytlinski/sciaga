@@ -14,7 +14,7 @@
 #### edit package.jason
 #### "scripts": {
 ####  &emsp;"test": "echo \"Error: no test specified\" && exit 1",
-####  &nbsp;&nbsp;&nbsp;&nbsp;"start": "nodemon app.js" // add this line than in terminal you can type npm start to run
+####  &emsp;"start": "nodemon app.js" // add this line than in terminal you can type npm start to run
 #### }
 
 ## Express
@@ -25,7 +25,7 @@
 #### const app = express(); // new express instance
 #### const PORT = 4000 // define port
 #### app.listen(PORT, () => {
-#### &nbsp;&nbsp;&nbsp;&nbsp;console.log('message for listening');
+#### &emsp;console.log('message for listening');
 #### }) // add listening
 
 ## GraphQL
@@ -34,8 +34,8 @@
 #### Usage
 #### const graphqlHTTP = require('express-graphql'); // import express-graphql
 #### app.use('/graphql', graphqlHTTP({ //enpoint, middleware
-#### &nbsp;&nbsp;&nbsp;&nbsp;schema, //graphql schema
-#### &nbsp;&nbsp;&nbsp;&nbsp;graphiql: true // optiona, true if graphiql shpuld be awaillable
+#### &emsp;schema, //graphql schema
+#### &emsp;graphiql: true // optiona, true if graphiql shpuld be awaillable
 #### }))
 ### Schema
 #### in schema file require graphql
@@ -43,41 +43,41 @@
 #### const { GrqaphQLObjectType, GraphQLString, GraphQLIn, GraphQLID, GraohQLSchema } = graphql; // deconstruct graphql, require needed
 #### Creating a type
 #### const NameType = new GraphQLObjectType({
-#### &nbsp;&nbsp;&nbsp;&nbsp;name: 'Name',
-#### &nbsp;&nbsp;&nbsp;&nbsp;fields: () => ({
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;propName: { type: one of gql types ex GraphQLString }
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;propName: { // prop wchich is user created type, has resolver for getting the data
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: ExistingType,
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;resolve(parent, args) {
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//code for get from db
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-#### &nbsp;&nbsp;&nbsp;&nbsp;})
+#### &emsp;name: 'Name',
+#### &emsp;fields: () => ({
+#### &emsp;&emsp;propName: { type: one of gql types ex GraphQLString }
+#### &emsp;&emsp;propName: { // prop wchich is user created type, has resolver for getting the data
+#### &emsp;&emsp;&emsp;type: ExistingType,
+#### &emsp;resolve(parent, args) {
+#### &emsp;&emsp;&emsp;&emsp;//code for get from db
+#### &emsp;&emsp;&emsp;}
+#### &emsp;&emsp}
+#### &emsp;})
 #### });
 #### Creating a query
 #### const RootQuery = new GraphQLObjectType({
-#### &nbsp;&nbsp;&nbsp;&nbsp;name: 'RootQueryType',
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fields: {
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: {
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: TypeWchichYouWantToUse, // usuly custom type
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;args: { type: OneOfTheGraphQlTypes }, // if they are needed
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;resolve(parent, args){
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// code for getting form db
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;secondname: {
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: TypeWchichYouWantToUse, // usuly custom type
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;args: { type: OneOfTheGraphQlTypes }, // if they are needed
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;resolve(parent, args){
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// code for getting form db
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+#### &emsp;name: 'RootQueryType',
+#### &emsp;&emsp;fields: {
+#### &emsp;&emsp;&emsp;name: {
+#### &emsp;&emsp;&emsp;&emsp;type: TypeWchichYouWantToUse, // usuly custom type
+#### &emsp;&emsp;&emsp;&emsp;args: { type: OneOfTheGraphQlTypes }, // if they are needed
+#### &emsp;&emsp;&emsp;&emsp;resolve(parent, args){
+#### &emsp;&emsp;&emsp;&emsp;&emsp;// code for getting form db
+#### &emsp;&emsp;&emsp;&emsp;}
+#### &emsp;&emsp;&emsp;},
+#### &emsp;&emsp;&emsp;secondname: {
+#### &emsp;&emsp;&emsp;&emsp;type: TypeWchichYouWantToUse, // usuly custom type
+#### &emsp;&emsp;&emsp;&emsp;args: { type: OneOfTheGraphQlTypes }, // if they are needed
+#### &emsp;&emsp;&emsp;&emsp;resolve(parent, args){
+#### &emsp;&emsp;&emsp;&emsp;&emsp;// code for getting form db
+#### &emsp;&emsp;&emsp;&emsp;}
+#### &emsp;&emsp;&emsp;}
+#### &emsp;&emsp;}
 #### });
 #### Exports
 #### module.exports = new GraphQLSchema({ // export witch graphqlschema, params query and mutatnion
-#### &nbsp;&nbsp;&nbsp;&nbsp;query: RootQuery,
-#### &nbsp;&nbsp;&nbsp;&nbsp;mutation: RootMutation
+#### &emsp;query: RootQuery,
+#### &emsp;mutation: RootMutation
 #### });
 
 ## Mongoose
@@ -86,9 +86,9 @@
 #### Usage
 #### const mongoose = require('mongoose'); // import mongoose
 #### mongoose.connect('connect_string_to_database', { useNewUrlParser: true }) // second parameter, option
-#### &nbsp;&nbsp;&nbsp;&nbsp;.then(
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // code when connected example:
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; app.listen(PORT, () => {
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log('message for listening');
+#### &emsp;.then(
+#### &emsp;&emsp; // code when connected example:
+#### &emsp;&emsp; app.listen(PORT, () => {
+#### &emsp;&emsp;&emsp;console.log('message for listening');
 #### })
 #### .catch(err => console.log(err)); // return promise
